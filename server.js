@@ -4,6 +4,8 @@ const connectDb = require("./config/dbConnection");
 
 connectDb();
 const app=express();
+var cors = require('cors');
+app.use(cors());
 
 const port=process.env.PORTb||5000;
 app.use(express.json());
